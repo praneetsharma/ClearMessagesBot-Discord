@@ -19,16 +19,19 @@ bot.on('ready', () => {
   bot.on('message', message => {
     if (message.content == CLEAR_MESSAGES) {
 
-      // TODO use the commented legacy code to perform
-      // some other TODOS and then delete the legacy code
-      /*if ( ! message.channel.permissionsFor(message.sender).hasPermission("manageMessages") ) {
-        msg.channel.sendMessage("Sorry, you don't have the permission to execute the command");
-      } else if ( ! message.channel.permissionsFor(bot.user).hasPermission("manageMessages") ) {
-        msg.channel.sendMessage("Sorry, I don't have the permission to execute the command");
-      } */
+      // Check the following permissions before deleting messages:
+      //    1. Check if the user has enough permissions
+      //    2. Check if I have the permission to execute the command
 
-      // TODO 1. Check if the user has enough permissions
-      // TODO 2. Check if I have the permission to execute the command
+      if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
+        message.channel.sendMessage("Sorry, you don't have the permission to execute the command \""+message.content+"\"");
+        console.log("Sorry, you don't have the permission to execute the command \""+message.content+"\"");
+        return;
+      } else if (!message.channel.permissionsFor(bot.user).hasPermission("MANAGE_MESSAGES")) {
+        message.channel.sendMessage("Sorry, I don't have the permission to execute the command \""+message.content+"\"");
+        console.log("Sorry, I don't have the permission to execute the command \""+message.content+"\"");
+        return;
+      }
 
       // Only delete messages if the channel type is TextChannel
       // DO NOT delete messages in DM Channel or Group DM Channel
