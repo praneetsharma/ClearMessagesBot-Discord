@@ -1,6 +1,9 @@
 # About ClearMessagesBot
 The bot clears/deletes all the messages on a particular channel. The command for that is *`!clearMessages`*.
 
+### TODO
+1. Auto-delete messages as soon as they are some time units old. For example - delete messages which are 24 hours old.
+
 ## Installation
 
 * Node.js 6.0.0 or newer version is required.
