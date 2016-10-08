@@ -1,0 +1,24 @@
+{
+  "name": "ClearMessagesBot-Discord",
+  "version": "1.0.0",
+  "description": "A simple bot to clear/delete all messages of a Discord channel",
+  "engines": {
+    "node": "6.7.0"
+  },
+  "main": "clear-messages.js",
+  "scripts": {
+    "start": "node clear-messages.js"
+  },
+  "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/praneetsharma/ClearMessagesBot-Discord"
+  },
+  "keywords": [
+    "discord",
+    "delete",
+    "clear"
+  ],
+  "license": "MIT"
+}
