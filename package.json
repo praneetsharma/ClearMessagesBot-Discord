@@ -10,7 +10,7 @@
     "start": "node clear-messages.js"
   },
   "dependencies": {
-    "discord.js": "9.3.x",
+    "discord.js": "9.3.x"
   },
   "repository": {
     "type": "git",
