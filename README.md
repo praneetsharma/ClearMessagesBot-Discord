@@ -6,9 +6,11 @@ The bot clears/deletes all the messages on a particular channel. The command for
 
 ## Deploying the Bot to Heroku
 
-### Deploy Automatically
+#### Deploy Automatically
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/praneetsharma/ClearMessagesBot-Discord)
+
+Note - Go to the heroku app page and change the running dyno from web to worker.
 
 #### Deploy Manually
 Run the following commands to deploy the bot manually on Heroku
